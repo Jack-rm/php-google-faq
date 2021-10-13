@@ -60,24 +60,28 @@ Non perdete tempo con la parte estetica finché non avete completato la logica i
 
 ?>
 <html>
+    <head>
+    <link rel="stylesheet" href="style/style.css">
+    </head>
+
     <header>
-        
-        <img src="<?php echo $headerItems['logo']; ?>" alt="logo principale google">
-        <h2> <?php echo $headerItems['sectionName']; ?> </h2>
-        <br>
-    
-        <ul>
-        <?php foreach ($navBar as $item) { ?>
-            <li> <?php echo $item; ?> </li>
-        <?php }; ?>
-        </ul>
-        
+        <section>
+            <img src="<?php echo $headerItems['logo']; ?>" alt="google main logo">
+            <h2> <?php echo $headerItems['sectionName']; ?> </h2>
+            <br>
+            <ul>
+            <?php foreach ($navBar as $item) { ?>
+                <li> <?php echo $item; ?> </li>
+            <?php }; ?>
+            </ul>
+        </section>
+        <hr>
     </header>
     <main>
 
         <?php foreach ($FAQs as $faq) {; ?>
 
-        <h3> <?php echo $faq['title']; ?> </h3>
+        <h4> <?php echo $faq['title']; ?> </h4>
         <p> <?php echo $faq['text']; ?> </p>
 
         <?php }; ?>
